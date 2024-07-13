@@ -38,7 +38,7 @@ Avant de commencer, assurez-vous d'avoir Node.js installé sur votre machine. Vo
 Une fois l'installation et la configuration terminées, vous pouvez exécuter l'application en utilisant la commande suivante :
 
 ```
-npm start
+npm run dev
 ```
 
 ## Besoin d'Aide ?
