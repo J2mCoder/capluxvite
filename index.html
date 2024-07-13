@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="src/css/aos.css" />
+    <link rel="stylesheet" href="src/css/style.css" />
+    <title>CapitaLux</title>
+  </head>
+  <body>
+    <div class="app">
+      <section
+        class="bg-[var(--bg-150)/50] backdrop-blur-xl fixed top-0 p-4 w-full z-20">
+        <div class="container mx-auto">
+          <div class="grid grid-cols-2 items-center">
+            <div class="text-left flex justify-start items-center">
+              <a href="#" class="text-3xl lg:text-5xl font-semibold">
+                Capita<span class="text-[var(--accent-100)]">Lux</span>
+              </a>
+            </div>
+            <div
+              class="text-right md:flex md:justify-end md:items-center space-x-6 hidden">
+              <a
+                href="#"
+                class="hover:text-[var(--accent-100)] transition duration-500 ease-in-out font-semibold text-lg"
+                >Accueil</a
+              >
+              <a
+                href="#about"
+                class="hover:text-[var(--accent-100)] transition duration-500 ease-in-out font-semibold text-lg flex flex-nowrap"
+                ><span class="mr-2">A</span><span>propos</span></a
+              >
+              <a
+                href="#services"
+                class="hover:text-[var(--accent-100)] transition duration-500 ease-in-out font-semibold text-lg"
+                >Services</a
+              >
+              <a
+                href="#equipes"
+                class="hover:text-[var(--accent-100)] transition duration-500 ease-in-out font-semibold text-lg"
+                >Equipes</a
+              >
+              <a
+                href="#contact"
+                class="hover:bg-[var(--accent-100)] transition duration-500 ease-in-out py-2 px-6 ring-2 hover:ring-offset-2 ring-offset-[var(--bg-100)] ring-[var(--accent-100)] rounded-md font-semibold"
+                >Contact</a
+              >
+            </div>
+            <div class="flex justify-end items-center md:hidden space-x-2">
+              <a
+                href="#"
+                title="Contact me"
+                class="flex justify-center items-center border border-[var(--accent-100)] p-1 rounded-md">
+                <lord-icon
+                  id="icon-contact-header"
+                  src="https://cdn.lordicon.com/srsgifqc.json"
+                  trigger="hover"
+                  delay="1000"
+                  colors="primary:#ff4d4d">
+                </lord-icon>
+              </a>
+              <button
+                id="open-menu"
+                title="Ouvrir le menu"
+                class="flex justify-center items-center border border-[var(--accent-100)] p-1 rounded-md">
+                <lord-icon
+                  src="https://cdn.lordicon.com/uwinmnkh.json"
+                  trigger="hover"
+                  delay="1000"
+                  id="icon-burger"
+                  colors="primary:#ff4d4d"
+                  class="-rotate-90">
+                </lord-icon>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          id="menu"
+          class="fixed -top-[1000px] right-0 bottom-0 left-0 bg-[var(--bg-175)] backdrop-blur-md h-[100dvh] flex justify-center items-center transition-all duration-1000 z-50">
+          <button
+            id="close-menu"
+            title="Fermer le menu"
+            class="group absolute top-5 right-10 text-4xl ring-2 hover:ring-offset-2 ring-offset-[var(--bg-100)] ring-[var(--accent-100)] rounded-md flex justify-center items-center px-2 py-1 hover:bg-[var(--accent-100)] transition duration-500">
+            <i
+              class="fa-solid fa-xmark text-[var(--accent-100)] group-hover:text-white"></i>
+          </button>
+          <div
+            id="menu-items"
+            class="text-right flex justify-end items-center flex-col space-y-5">
+            <a
+              href="#"
+              class="hover:text-[var(--accent-100)] transition duration-500 ease-in-out font-semibold text-lg"
+              >Accueil</a
+            >
+            <a
+              href="#about"
+              class="hover:text-[var(--accent-100)] transition duration-500 ease-in-out font-semibold text-lg flex flex-nowrap"
+              ><span class="mr-2">A</span><span>propos</span></a
+            >
+            <a
+              href="#services"
+              class="hover:text-[var(--accent-100)] transition duration-500 ease-in-out font-semibold text-lg"
+              >Services</a
+            >
+            <a
+              href="#equipes"
+              class="hover:text-[var(--accent-100)] transition duration-500 ease-in-out font-semibold text-lg"
+              >Equipes</a
+            >
+            <a
+              href="#contact"
+              class="hover:bg-[var(--accent-100)] transition duration-500 ease-in-out py-2 px-6 ring-2 hover:ring-offset-2 ring-offset-[var(--bg-100)] ring-[var(--accent-100)] rounded-md font-semibold"
+              >Contact</a
+            >
+          </div>
+        </div>
+      </section>
+      <section
+        class="relative py-20 h-[100dvh] flex justify-center items-center z-10"
+        style="
+          background: url(src/assets/homebg.jpg) center center/cover no-repeat;
+        ">
+        <div class="top-0 bottom-0 left-0 right-0 bg-black/60 absolute"></div>
+        <div class="container mx-auto z-10 flex justify-center items-center">
+          <div class="flex justify-center items-center flex-col md:w-[70%]">
+            <h1
+              class="text-3xl lg:text-5xl font-semibold flex-wrap text-[var(--text-200)] text-center">
+              Optimisez vos finances avec nos services sur mesure.
+            </h1>
+            <p class="text-[var(--accent-200)] text-center mt-2">
+              Notre équipe de professionnels chevronnés est là pour vous
+              accompagner
+              <br />dans vos décisions financières stratégiques.
+            </p>
+            <div class="mt-4">
+              <a
+                href=""
+                class="ring hover:ring-offset-2 ring-offset-transparent ring-[var(--accent-100)] rounded-md text-[var(--accent-100)] flex justify-center items-center p-2 bg-[var(--bg-100)] transition duration-500 ease-in-out font-semibold text-lg space-x-2"
+                ><lord-icon
+                  id="icon-hero"
+                  src="https://cdn.lordicon.com/srsgifqc.json"
+                  trigger="loop"
+                  delay="1000"
+                  colors="primary:#ff4d4d">
+                </lord-icon>
+                <span>Contacter nous</span></a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        id="about"
+        class="min-h-[125dvh] scroll-pt-24 pt-24 flex justify-center">
+        <div class="container w-[90%] md:w-auto">
+          <div class="text-center mb-12">
+            <h1 class="text-3xl font-bold mb-1">A PROPOS</h1>
+            <div
+              class="bg-[var(--accent-100)] rounded-lg mx-auto w-8 h-1"></div>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+            <div class="col-span-1 relative">
+              <img
+                src="src/assets/about.jpg"
+                alt="About photo"
+                class="w-full h-[300px] md:h-[500px] object-cover bg-center bg-cover rounded-lg" />
+              <div
+                class="absolute w-full top-0 bg-black/45 rounded-lg h-[300px] md:h-[500px]"></div>
+            </div>
+            <div class="col-span-1">
+              <div class="text-center md:text-justify">
+                <p class="mb-2">
+                  <b class="text-xl text-[var(--accent-100)]">
+                    À Propos de Nous
+                  </b>
+                  <br />
+                  Bienvenue chez Consultant Financier Expert !
+                </p>
+                <p class="mb-2">
+                  <b class="text-xl text-[var(--accent-100)]">
+                    Notre Histoire
+                  </b>
+                  <br />
+                  Notre aventure a commencé il y a plus de dix ans, lorsque
+                  notre fondateur, Jean Dupont, a décidé de mettre son expertise
+                  financière au service des particuliers et des entreprises.
+                  Passionné par les chiffres et les opportunités
+                  d’investissement, il a créé Consultant Financier Expert avec
+                  une vision claire : aider nos clients à atteindre leurs
+                  objectifs financiers.
+                </p>
+                <p class="mb-2">
+                  <b class="text-xl text-[var(--accent-100)]">
+                    Notre Mission
+                  </b>
+                  <br />
+                  Chez Consultant Financier Expert, nous croyons que chaque
+                  personne mérite une gestion financière avisée et
+                  personnalisée. Notre mission est de fournir des conseils
+                  financiers de qualité, des stratégies d’investissement
+                  intelligentes et une planification fiscale efficace. Nous
+                  sommes là pour vous accompagner à chaque étape de votre
+                  parcours financier.
+                </p>
+                <p class="mb-2">
+                  <b class="text-xl text-[var(--accent-100)]">Nos Valeurs</b>
+                  <br />
+                  Intégrité : Nous agissons toujours dans l’intérêt de nos
+                  clients, en toute transparence. Excellence : Nous visons
+                  l’excellence dans nos services et recherchons constamment des
+                  moyens d’améliorer vos résultats financiers. Engagement :
+                  Votre succès est notre priorité. Nous sommes engagés à vous
+                  offrir des solutions sur mesure. Confidentialité : Vos
+                  informations sont en sécurité avec nous. Nous respectons la
+                  confidentialité de nos clients.
+                </p>
+                <p class="mb-2">
+                  <b class="text-xl text-[var(--accent-100)]">Notre Équipe</b>
+                  <br />
+                  Derrière Consultant Financier Expert, il y a une équipe
+                  passionnée et compétente. Nos conseillers financiers,
+                  analystes et experts en investissement travaillent ensemble
+                  pour vous offrir les meilleures solutions. Découvrez notre
+                  équipe sur notre page dédiée.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        id="services"
+        class="min-h-[100dvh] scroll-pt-24 pt-24 flex justify-center w-90%">
+        <div class="container">
+          <div class="">
+            <div class="text-center mb-2">
+              <h1 class="text-5xl font-bold">Nos services</h1>
+            </div>
+            <div
+              class="bg-[var(--accent-100)] rounded-lg mx-auto w-8 h-1"></div>
+          </div>
+          <br />
+          <br />
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 w-90% p-4">
+            <div
+              class="group col-span-1 hover:scale-105 rounded-lg p-4 h-[235px] flex flex-col bg-white/5 backdrop-blur-md shadow-lg transition-all hover:shadow-red-500 hover:shadow-sm">
+              <div class="flex justify-center items-center mb-2">
+                <img
+                  src="src/assets/Quotation_strategy.svg"
+                  alt=""
+                  height="60"
+                  width="60" />
+              </div>
+              <div class="">
+                <p
+                  class="text-center text-zinc-400 group-hover:text-white font-medium">
+                  Analyse Financière Précise : Nous analysons vos données pour
+                  identifier des opportunités d'optimisation. Réduction
+                  d'impôts, maximisation des investissements, gestion des dettes
+                  : nous vous guidons à chaque étape.
+                </p>
+              </div>
+            </div>
+            <div
+              class="group col-span-1 hover:scale-105 rounded-lg p-4 h-[235px] flex flex-col bg-white/5 backdrop-blur-md shadow-lg transition-all hover:shadow-red-500 hover:shadow-sm">
+              <div class="flex justify-center items-center mb-2">
+                <img
+                  src="src/assets/sockeMarket.svg"
+                  alt=""
+                  height="60"
+                  width="60" />
+              </div>
+              <div class="">
+                <p
+                  class="text-center text-zinc-400 group-hover:text-white font-medium">
+                  Investissements Stratégiques : Grâce à notre expertise, prenez
+                  des décisions éclairées. Nous analysons les marchés, évaluons
+                  les risques et concevons des portefeuilles sur mesure pour
+                  atteindre vos objectifs.
+                </p>
+              </div>
+            </div>
+            <div
+              class="group col-span-1 hover:scale-105 rounded-lg p-4 h-[235px] flex flex-col bg-white/5 backdrop-blur-md shadow-lg transition-all hover:shadow-red-500 hover:shadow-sm">
+              <div class="flex justify-center items-center mb-2">
+                <img
+                  src="src/assets/calculator.svg"
+                  alt=""
+                  height="60"
+                  width="60" />
+              </div>
+              <div class="">
+                <p
+                  class="text-center text-zinc-400 group-hover:text-white font-medium">
+                  Planification Fiscale Avancée : Nous simplifions la fiscalité
+                  complexe en élaborant des stratégies personnalisées pour
+                  minimiser vos impôts, tout en respectant les lois.
+                </p>
+              </div>
+            </div>
+            <div
+              class="group col-span-1 hover:scale-105 rounded-lg p-4 h-[235px] flex flex-col bg-white/5 backdrop-blur-md shadow-lg transition-all hover:shadow-red-500 hover:shadow-sm">
+              <div class="flex justify-center items-center mb-2">
+                <img
+                  src="src/assets/search.svg"
+                  alt=""
+                  height="60"
+                  width="60" />
+              </div>
+              <div class="">
+                <p
+                  class="text-center text-zinc-400 group-hover:text-white font-medium">
+                  Analyse Financière Précise : Nous analysons vos données pour
+                  identifier des opportunités d'optimisation. Réduction
+                  d'impôts, maximisation des investissements, gestion des dettes
+                  : nous vous guidons à chaque étape.
+                </p>
+              </div>
+            </div>
+            <div
+              class="group col-span-1 hover:scale-105 rounded-lg p-4 h-[235px] flex flex-col bg-white/5 backdrop-blur-md shadow-lg transition-all hover:shadow-red-500 hover:shadow-sm">
+              <div class="flex justify-center items-center mb-2">
+                <img src="src/assets/clock.svg" alt="" height="60" width="60" />
+              </div>
+              <div class="">
+                <p
+                  class="text-center text-zinc-400 group-hover:text-white font-medium">
+                  Conseils en Retraite : Préparez-vous financièrement pour la
+                  retraite. Nous concevons des stratégies pour maximiser vos
+                  revenus, gérer vos prestations sociales et planifier votre
+                  transition.
+                </p>
+              </div>
+            </div>
+            <div
+              class="group col-span-1 hover:scale-105 rounded-lg p-4 h-[235px] flex flex-col bg-white/5 backdrop-blur-md shadow-lg transition-all hover:shadow-red-500 hover:shadow-sm">
+              <div class="flex justify-center items-center mb-2">
+                <img src="src/assets/house.svg" alt="" height="60" width="60" />
+              </div>
+              <div class="">
+                <p
+                  class="text-center text-zinc-400 group-hover:text-white font-medium">
+                  Gestion de Patrimoine : Nous vous aidons à gérer et à faire
+                  fructifier votre patrimoine. Besoin de conseils en immobilier,
+                  investissements à long terme ou diversification d'actifs ?
+                  Notre équipe est là pour vous accompagner.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
+    <script src="src/js/aos.js"></script>
+    <script type="module" src="src/js/main.js"></script>
+  </body>
+</html>
